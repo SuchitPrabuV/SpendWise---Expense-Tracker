@@ -4,13 +4,39 @@
   border: 1px solid #e2e8f0;
   border-radius: 12px;
   box-shadow: 0 2px 6px rgba(15, 23, 42, 0.04);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.transaction-form.editing-mode {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.15), 0 4px 12px rgba(15, 23, 42, 0.06);
+}
+
+.form-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+  gap: 12px;
 }
 
 .transaction-form h3 {
-  margin: 0 0 24px;
+  margin: 0;
   color: #111827;
   font-size: 21px;
   font-weight: 600;
+}
+
+.editing-indicator-badge {
+  display: inline-block;
+  padding: 4px 10px;
+  background-color: #dbeafe;
+  color: #1d4ed8;
+  font-size: 12px;
+  font-weight: 600;
+  border-radius: 20px;
+  border: 1px solid #bfdbfe;
 }
 
 .form-grid {
@@ -43,6 +69,7 @@
   color: #111827;
   font-family: inherit;
   font-size: 14px;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
 }
 
 .form-group input:focus,
@@ -52,15 +79,41 @@
   box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
 }
 
-.form-error {
-  margin: 16px 0 0;
-  color: #dc2626;
+.form-alert {
+  margin-top: 18px;
+  padding: 12px 16px;
+  border-radius: 8px;
   font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.form-alert-error {
+  background-color: #fef2f2;
+  border: 1px solid #fecaca;
+  color: #b91c1c;
+}
+
+.form-alert-success {
+  background-color: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  color: #15803d;
+}
+
+.alert-icon {
+  font-size: 16px;
+}
+
+.form-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 24px;
 }
 
 .submit-transaction {
-  margin-top: 24px;
-  padding: 12px 20px;
+  padding: 12px 24px;
   border: none;
   border-radius: 8px;
   background: #2563eb;
@@ -69,14 +122,43 @@
   font-size: 14px;
   font-weight: 600;
   cursor: pointer;
+  transition: background-color 0.15s ease, transform 0.1s ease;
 }
 
 .submit-transaction:hover {
   background: #1d4ed8;
 }
 
+.submit-transaction:active {
+  transform: translateY(1px);
+}
+
 .submit-transaction:focus-visible {
   outline: 3px solid #93c5fd;
+  outline-offset: 2px;
+}
+
+.cancel-button {
+  padding: 12px 20px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #475569;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.15s ease, border-color 0.15s ease;
+}
+
+.cancel-button:hover {
+  background: #f1f5f9;
+  border-color: #94a3b8;
+  color: #1e293b;
+}
+
+.cancel-button:focus-visible {
+  outline: 2px solid #64748b;
   outline-offset: 2px;
 }
 
@@ -87,5 +169,16 @@
 
   .form-grid {
     grid-template-columns: 1fr;
+  }
+
+  .form-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .submit-transaction,
+  .cancel-button {
+    width: 100%;
+    text-align: center;
   }
 }
