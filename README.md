@@ -4,14 +4,14 @@ SpendWise is a modern, responsive personal finance tracking web application desi
 
 ---
 
-## 🚀 Key Features
+## Key Features
 
 ### 1. Dynamic Financial Overview
 - **Real-time Metrics**: Live calculation of Total Income, Total Expenses, Remaining Balance, and UPI Spending.
 - **Timeframe Filtering**: Filter dashboard metrics across **Today**, **This Week**, **This Month**, **This Year**, and **All Time**.
 - **Negative Balance Alert**: Visual indicators and warning states when expenses exceed total income.
 
-### 2. Comprehensive Transaction Management (Module 3 & 4)
+### 2. Comprehensive Transaction Management
 - **Income & Expense Tracking**: Separate categorization for inflow (Salary, Allowance, Freelance, Other income) and outflow (Food, Travel, Shopping, Education, Bills, Entertainment, Healthcare, Other expenses).
 - **Payment Method Support**: Categorize transactions by UPI, Cash, Card, and Bank Transfer.
 - **Smart Validation**: Guardrails preventing negative or empty amounts, missing dates, or excessive description lengths.
@@ -21,7 +21,7 @@ SpendWise is a modern, responsive personal finance tracking web application desi
 - **Multi-criteria Sorting**: Sort by newest first, oldest first, highest amount, or lowest amount.
 - **Pagination**: Smooth pagination with page indicators and controls.
 
-### 3. Spending Analytics & Interactive Charts (Module 6)
+### 3. Spending Analytics & Interactive Charts
 - **Expense Category Breakdown**: Doughnut chart showing percentage and rupee distribution across expense categories.
 - **Income vs. Expenses**: Monthly comparative bar chart tracking cash flow.
 - **Monthly Spending Trend**: Line chart illustrating expenditure patterns over time.
@@ -30,7 +30,7 @@ SpendWise is a modern, responsive personal finance tracking web application desi
 - **Configurable Analytics Timeframes**: View insights by This Month, Last Month, Last 3 Months, This Year, All Time, or Custom Date Ranges.
 - **Empty States**: Contextual messages guiding users when no transactions are recorded for a period.
 
-### 4. Persistent Browser Storage & Demo Mode (Module 7)
+### 4. Persistent Browser Storage & Demo Mode
 - **Offline & Local Storage**: Data automatically persists in `localStorage` across page reloads and browser sessions.
 - **Fault Tolerance**: Resilient try-catch wrapping protects against storage restrictions or quota limits.
 - **Interactive Demo Mode**: Explore preloaded sample datasets with realistic student/freelancer finances. Easily switch back to a clean personal ledger or reset all stored data.
@@ -48,7 +48,7 @@ SpendWise is a modern, responsive personal finance tracking web application desi
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 spendwise/
@@ -81,7 +81,7 @@ spendwise/
 
 ---
 
-## 💻 Getting Started Locally
+## Getting Started Locally
 
 ### Prerequisites
 - Node.js (v18.0.0 or higher recommended)
@@ -122,7 +122,7 @@ spendwise/
 
 ---
 
-## 🌐 Deployment Instructions
+## Deployment Instructions
 
 SpendWise is configured as a static Single Page Application (SPA) ready for deployment to any static web hosting provider:
 
@@ -142,7 +142,7 @@ SpendWise is configured as a static Single Page Application (SPA) ready for depl
 
 ---
 
-## ⚠️ Known Limitations & Scope
+## Known Limitations & Scope
 
 To maintain high performance and simplicity, Version 1 focuses exclusively on a client-side personal financial ledger:
 - **Client-Side Storage**: Data is saved to the browser's `localStorage` and does not synchronize across separate devices or private browser windows.
@@ -150,6 +150,3 @@ To maintain high performance and simplicity, Version 1 focuses exclusively on a 
 - **No Backend Database**: In line with the design specifications, multi-user authentication, cloud databases, and automatic bank imports are deferred to future versions.
 
 ---
-
-## 📄 License
-This project is open-source and available under the [MIT License](LICENSE).
